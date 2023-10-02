@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 export const dynamic = "force-dynamic";
 export const metadata = {
@@ -13,7 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="min-h-screen bg-background flex flex-col items-center">
+        <Header />
+        <main className="min-h-screen flex flex-col items-center">
           {children}
         </main>
       </body>
