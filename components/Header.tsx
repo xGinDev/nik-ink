@@ -1,10 +1,10 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import Link from "next/link";
 import { cookies } from "next/headers";
 import LogoutButton from "../components/LogoutButton";
 import Image from "next/image";
 import Logo from "../public/header/Logo.png";
 import { ModeToggle } from "./DarkMode/Button";
+import { Login } from "./login/page";
 export const dynamic = "force-dynamic";
 
 export default async function Header() {
@@ -23,9 +23,7 @@ export default async function Header() {
           <LogoutButton />
         </div>
       ) : (
-        <Link href="/login" className="">
-          Login
-        </Link>
+        <Login />
       )}
       <ModeToggle />
     </div>
