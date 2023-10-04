@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -15,16 +13,12 @@ export function Login() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Login</Button>
+        <Button variant="ghost">Login</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
+          <DialogTitle>Log in or sign up</DialogTitle>
         </DialogHeader>
-
         <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
           <form
             className="flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
@@ -50,21 +44,18 @@ export function Login() {
               placeholder="••••••••"
               required
             />
-            <button className="bg-green-700 rounded px-4 py-2 text-white mb-2">
+            <button className="bg-primary rounded px-4 py-2 text-white mb-2">
               Sign In
             </button>
-            <button
+            {/* <button
               formAction="/auth/sign-up"
               className="border border-gray-700 rounded px-4 py-2 text-black mb-2"
             >
               Sign Up
-            </button>
+            </button> */}
             <Messages />
           </form>
         </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
