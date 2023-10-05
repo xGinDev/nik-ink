@@ -3,8 +3,9 @@ export const dynamic = "force-dynamic";
 import "./globals.css";
 import { ThemeProvider } from "@/components/DarkMode/DarkMode";
 export const metadata = {
-  title: "Tattoo Location",
-  description: "Find the perfect tattoo location",
+  title: "TattooNest",
+  description:
+    "Discover the top tattoo studios near you on TattooNest. Explore a diverse selection of talented artists and unique designs. Find your next tattoo and book your appointment today.",
 };
 
 export default function RootLayout({

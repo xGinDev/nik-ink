@@ -13,7 +13,7 @@ export function Login() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="ghost">Login</Button>
+        <Button variant="destructive">Login</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -44,7 +44,7 @@ export function Login() {
               placeholder="••••••••"
               required
             />
-            <button className="bg-primary rounded px-4 py-2 text-white mb-2">
+            <button className="bg-secondary rounded px-4 py-2 text-white mb-2">
               Sign In
             </button>
             {/* <button
