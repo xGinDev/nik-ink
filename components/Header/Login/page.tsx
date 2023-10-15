@@ -1,5 +1,5 @@
+import { useState } from "react";
 import Messages from "./messages";
-
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 
 export function Login() {
+  const [resetPass, setResetPass] = useState(false);
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -47,12 +48,6 @@ export function Login() {
             <button className="bg-secondary rounded px-4 py-2 text-white mb-2">
               Sign In
             </button>
-            {/* <button
-              formAction="/auth/sign-up"
-              className="border border-gray-700 rounded px-4 py-2 text-black mb-2"
-            >
-              Sign Up
-            </button> */}
             <Messages />
           </form>
         </div>
