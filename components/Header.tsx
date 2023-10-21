@@ -16,7 +16,7 @@ export default async function Header() {
   } = await supabase.auth.getUser();
 
   return (
-    <div className="w-full max-w-screen-xl py-2 px-2 m-auto flex items-center justify-between sticky top-0 border-b-[1px] border-slate-800/20">
+    <div className="w-full py-2 px-2 m-auto flex items-center justify-between sticky top-0 border-b-[1px] border-slate-800/20">
       <Image src={Logo} alt="Tattoo Logo" width={120} height={100} />
       <div className="w-6/12 min-[320px]:hidden lg:block">
         <SearchBar />

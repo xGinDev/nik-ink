@@ -4,15 +4,15 @@ import { cookies } from "next/headers";
 
 export default async function Index() {
   const cookieStore = cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createServerComponentClient({ cookies });
 
-  const { data: local } = await supabase.from("local").select();
+  const { data: locals } = await supabase.from("local").select();
 
   return (
     <div className="w-full flex flex-col items-center">
       <Home />
       <ul className="my-auto text-foreground">
-        {local?.map((local) => (
+        {locals?.map((local) => (
           <div className="">
             <li key={local.id}>{local.name}</li>
             <li key={local.id}>{local.description}</li>

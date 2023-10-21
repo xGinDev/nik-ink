@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 export const dynamic = "force-dynamic";
 import "./globals.css";
 import { ThemeProvider } from "@/components/DarkMode/DarkMode";
+import Footer from "@/components/Footer/Footer";
 export const metadata = {
   title: "TattooNest",
   description:
@@ -26,6 +27,7 @@ export default function RootLayout({
           <main className="max-w-screen-xl m-auto flex flex-col items-center">
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
