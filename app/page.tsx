@@ -11,14 +11,14 @@ export default async function Index() {
   return (
     <div className="w-full flex flex-col items-center">
       <Home />
-      <ul className="my-auto text-foreground">
+      <div className="my-auto text-foreground grid grid-cols-2 gap-4 lg:grid-cols-4">
         {locals?.map((local) => (
           <div className="">
-            <li key={local.id}>{local.name}</li>
-            <li key={local.id}>{local.description}</li>
+            <h2 key={local.id}>{local.name}</h2>
+            <p key={local.id}>{local.description}</p>
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Logo from "../public/header/Logo.svg";
 import { ModeToggle } from "./DarkMode/Button";
 import { Login } from "./Header/Login/page";
 import { SearchBar } from "./Header/Search-bar/SearchBar";
+import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 export default async function Header() {
@@ -17,7 +18,9 @@ export default async function Header() {
 
   return (
     <div className="w-full py-2 px-2 m-auto flex items-center justify-between sticky top-0 border-b-[1px] border-slate-800/20">
-      <Image src={Logo} alt="Tattoo Logo" width={120} height={100} />
+      <Link href={"/"}>
+        <Image src={Logo} alt="Tattoo Logo" width={120} height={100} />
+      </Link>
       <div className="w-6/12 min-[320px]:hidden lg:block">
         <SearchBar />
       </div>
